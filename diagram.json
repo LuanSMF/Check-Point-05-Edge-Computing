@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "author": "Vinheria Agnello - CP05",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -18.9, "left": 129, "attrs": {} },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 118.2,
+      "left": 209.2,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 114.4,
+      "left": -75.4,
+      "rotate": 270,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 100.8,
+      "left": -67.75,
+      "rotate": 90,
+      "attrs": { "value": "330" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "dht1:GND", "esp:GND.1", "#8f4814", [ "v0" ] ],
+    [ "dht1:SDA", "esp:D15", "green", [ "v0" ] ],
+    [ "ldr1:AO", "esp:D34", "orange", [ "h-19.2", "v-162.5", "h-201.6", "v81.9" ] ],
+    [ "esp:D26", "r1:1", "violet", [ "h-24.2", "v215.8" ] ],
+    [ "r1:2", "led1:A", "violet", [ "v0" ] ],
+    [ "led1:C", "esp:GND.2", "#8f4814", [ "h0" ] ],
+    [ "ldr1:VCC", "esp:3V3", "blue", [ "h0" ] ],
+    [ "ldr1:GND", "esp:GND.1", "#8f4814", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}

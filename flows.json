@@ -1,0 +1,529 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b9e9fbb78a8e88f7",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b6f43e6496d32f78",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "172.17.0.1",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f0fb7835ea2cb6e2",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "cd7aa662032fa0ed",
+        "type": "ui-theme",
+        "name": "Tema Vinheria",
+        "colors": {
+            "surface": "#fcfcfd",
+            "primary": "#0d74ce",
+            "bgPage": "#f9f9fb",
+            "groupBg": "#ffffff",
+            "groupOutline": "#d9d9e0"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "12bb5226d6933b0e",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "f0fb7835ea2cb6e2",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "cd7aa662032fa0ed",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "tabs": [],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "509264ea05af9714",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "12bb5226d6933b0e",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "65a50474d7609458",
+        "type": "ui-page",
+        "name": "Vinheria Agnello",
+        "ui": "f0fb7835ea2cb6e2",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "cd7aa662032fa0ed",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "tabs": [],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "a7d88338e72738e5",
+        "type": "ui-group",
+        "name": "Sensores",
+        "page": "65a50474d7609458",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "a0e94f9ba86595ed",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "/TEF/agnelloiris/attrs",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b9e9fbb78a8e88f7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "d147fb859c21c6c7",
+                "4f64e85dc8659e31",
+                "d4aa80ddb0bafd65"
+            ]
+        ]
+    },
+    {
+        "id": "d147fb859c21c6c7",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3768995eec1fa6b8",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "/ul/TEF/agnelloiris/attrs",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b6f43e6496d32f78",
+        "x": 980,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b9eea93931505cec",
+        "type": "ui-gauge",
+        "z": "f6f2187d.f17ca8",
+        "name": "Temperatura (°C)",
+        "group": "a7d88338e72738e5",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperatura (°C)",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "°C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "80",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 710,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c86908aede0eb73",
+        "type": "ui-gauge",
+        "z": "f6f2187d.f17ca8",
+        "name": "Umidade",
+        "group": "a7d88338e72738e5",
+        "order": 0,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Umidade (%)",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 700,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d718881a6c091115",
+        "type": "ui-gauge",
+        "z": "f6f2187d.f17ca8",
+        "name": "Luminosidade",
+        "group": "a7d88338e72738e5",
+        "order": 0,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Luminosidade",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100000",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 700,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f64e85dc8659e31",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Separar sensores",
+        "func": "const partes = String(msg.payload).split(\"|\");\n\nconst t = Number(partes[1]);\nconst h = Number(partes[3]);\nconst l = Number(partes[5]);\n\nreturn [\n    { payload: t },\n    { payload: h },\n    { payload: l }\n];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 200,
+        "wires": [
+            [
+                "b9eea93931505cec"
+            ],
+            [
+                "7c86908aede0eb73"
+            ],
+            [
+                "d718881a6c091115"
+            ]
+        ]
+    },
+    {
+        "id": "d4aa80ddb0bafd65",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Preparar Smart Data Model",
+        "func": "\nconst partes = String(msg.payload).split(\"|\");\n\nconst temperatura = Number(partes[1]);\nconst umidade = Number(partes[3]);\nconst ldr = Number(partes[5]);\n\nif (\n    !Number.isFinite(temperatura) ||\n    !Number.isFinite(umidade) ||\n    !Number.isFinite(ldr)\n) {\n    node.warn(\"Formato de mensagem inválido: \" + msg.payload);\n    return null;\n}\n\nconst instante = partes[7];\n\nmsg.method = \"PATCH\";\nmsg.url = \"http://172.17.0.1:1026/v2/entities/urn:ngsi-ld:IndoorEnvironmentObserved:adega-demo/attrs?options=upsert\";\n\nmsg.headers = {\n    \"Content-Type\": \"application/json\",\n    \"fiware-service\": \"openiot\",\n    \"fiware-servicepath\": \"/\"\n};\n\nmsg.payload = {\n    temperature: {\n        type: \"Number\",\n        value: temperatura\n    },\n    relativeHumidity: {\n        type: \"Number\",\n        value: umidade / 100\n    },\n    dateObserved: {\n        type: \"DateTime\",\n        value: instante || new Date().toISOString()\n    }\n};\n\nnode.warn(\"Payload preparado: \" + JSON.stringify(msg.payload));\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 380,
+        "wires": [
+            [
+                "ee3c34bd7438fbe6"
+            ]
+        ]
+    },
+    {
+        "id": "ee3c34bd7438fbe6",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 790,
+        "y": 380,
+        "wires": [
+            [
+                "661db14bb799b658"
+            ]
+        ]
+    },
+    {
+        "id": "661db14bb799b658",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "statusCode",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "baedd4640d39068e",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.34.0"
+        }
+    }
+]
